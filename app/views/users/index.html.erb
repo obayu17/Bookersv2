@@ -1,4 +1,5 @@
 <div class="container">
+	<p id="notice"><%= notice %></p>
 	<div class="row">
 		<div class="col-xs-3">
 			<h2>User info</h2>
@@ -23,7 +24,7 @@
 				<tbody>
 					<% @users.each do |user| %>
 					<tr>
-						<td><%= attachment_image_tag(user, :profile_image, :fill, 55, 55, fallback: "no-image.jpg") %></td>
+						<td><%= attachment_image_tag(user, :profile_image, :fill, 55, 55, fallback: "no-image-mini.jpg") %></td>
 						<td><%= user.name%></td>
 						<td><%= link_to "Show", user, class: "user_#{user.id}" %></td>
 					</tr>
